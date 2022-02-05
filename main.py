@@ -79,7 +79,14 @@ print(dog_years)
 # 3. Print a message such as:
 #      - A triangle with sides of <a>, <b> & <c> is a <type of triangle> triangle
 
+value1, value2, value3 = input("Enter the lengths of three sides of a triangle: ").split()
 
+if value1 == value2 == value3:
+  print(f'A triangle with sides of {value1}, {value2}, & {value3} is a equalateral triangle')
+elif (value1 == value2) or (value2 == value3) or (value1 == value3):
+  print(f'A triangle with sides of {value1}, {value2}, & {value3} is a isosceles triangle')
+else:
+  print(f'A triangle with sides of {value1}, {value2}, & {value3} is a scalene triangle')
 
 
 # exercise-05 Fibonacci sequence for first 50 terms
