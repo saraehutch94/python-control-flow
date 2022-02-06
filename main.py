@@ -55,9 +55,7 @@ entered_age = int(human_years)
 dog_years = 0
 
 for number in range(0, entered_age, 1):
-  if number == 1:
-    dog_years += 10
-  elif number == 2:
+  if (number == 1) or (number == 2):
     dog_years += 10
   else:
     dog_years += 7
@@ -105,23 +103,18 @@ else:
 
 term = 0
 number1 = 0
-number2 = 1
+number2 = 0
 count = 0
 
-# for num in range(0, 51, 1):
 while term <= 50:
   print(f'term: {term} / number: {count}')
   if (term == 0):
     count += 1
     term += 1
-  elif (term == 1):
-    count = number1 + number2
-    number1 = count
-    term += 1
   else:
-    count = number1 + number2
-    number2 = number1
-    number1 = count
+    number1 = number2 + count
+    number2 = count
+    count = number1
     term += 1
 
 # exercise-06 What's the  Season?
