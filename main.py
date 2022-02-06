@@ -143,3 +143,8 @@ month = input("Enter a month, starting with the first three letters: ").lower()
 
 day = input("Enter the numerical day of the month: ")
 
+winter_months = ["Dec", "Jan", "Feb", "Mar"]
+spring_months = ["Mar", "Apr", "May", "Jun"]
+summer_months = ["Jun", "Jul", "Aug", "Sep"]
+fall_months = ["Sep", "Oct", "Nov", "Dec"]
+
