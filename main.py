@@ -108,12 +108,13 @@ number1 = 0
 number2 = 1
 count = 0
 
-for num in range(0, 51, 1):
+# for num in range(0, 51, 1):
+while term <= 50:
   print(f'term: {term} / number: {count}')
-  if (num == 0):
+  if (term == 0):
     count += 1
     term += 1
-  elif (num == 1):
+  elif (term == 1):
     count = number1 + number2
     number1 = count
     term += 1
