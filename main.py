@@ -117,7 +117,7 @@ while term <= 50:
     count = number1
     term += 1
 
-# exercise-06 What's the  Season?
+# exercise-06 What's the Season?
 
 # Write the code that:
 # 1. Prompts the user to enter the month (as three characters):
@@ -138,3 +138,8 @@ while term <= 50:
 #
 # After setting the likely season, you can use another if...elif...else statement to "adjust" if
 # the day number falls within a certain range.
+
+month = input("Enter a month, starting with the first three letters: ").lower()
+
+day = input("Enter the numerical day of the month: ")
+
