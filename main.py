@@ -88,7 +88,6 @@ elif (value1 == value2) or (value2 == value3) or (value1 == value3):
 else:
   print(f'A triangle with sides of {value1}, {value2}, & {value3} is a scalene triangle')
 
-
 # exercise-05 Fibonacci sequence for first 50 terms
 
 # Write the code that:
@@ -104,9 +103,25 @@ else:
 
 # Hint: The next number is found by adding the two numbers before it
 
+term = 0
+number1 = 0
+number2 = 1
+count = 0
 
-
-
+for num in range(0, 51, 1):
+  print(f'term: {term} / number: {count}')
+  if (num == 0):
+    count += 1
+    term += 1
+  elif (num == 1):
+    count = number1 + number2
+    number1 = count
+    term += 1
+  else:
+    count = number1 + number2
+    number2 = number1
+    number1 = count
+    term += 1
 
 # exercise-06 What's the  Season?
 
