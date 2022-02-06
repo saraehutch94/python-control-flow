@@ -143,8 +143,61 @@ month = input("Enter a month, starting with the first three letters: ").lower()
 
 day = input("Enter the numerical day of the month: ")
 
-winter_months = ["Dec", "Jan", "Feb", "Mar"]
-spring_months = ["Mar", "Apr", "May", "Jun"]
-summer_months = ["Jun", "Jul", "Aug", "Sep"]
-fall_months = ["Sep", "Oct", "Nov", "Dec"]
+# convert day input string into integer
+day_integer = int(day)
 
+# set up lists for each season's months
+winter_season = ["dec", "jan", "feb", "mar"]
+spring_season = ["mar", "apr", "may", "jun"]
+summer_season = ["jun", "jul", "aug", "sep"]
+fall_season = ["sep", "oct", "nov", "dec"]
+
+# for overlapping-season months:
+# March, June, September & December
+overlap_month = []
+
+# check month for seasons
+if month in winter_season:
+  if month in spring_season:
+    overlap_month.append(month)
+  elif month in fall_season:
+    overlap_month.append(month)
+  else:
+    print(f'{month.capitalize()} {day} falls within the Winter season')
+elif month in spring_season:
+  if month in summer_season:
+    overlap_month.append(month)
+  else:
+    print(f'{month.capitalize()} {day} falls within the Spring season')
+elif month in summer_season:
+  if month in fall_season:
+    overlap_month.append(month)
+  else:
+    print(f'{month.capitalize()} {day} falls within the Summer season')
+# else: month in fall_season
+else:
+  print(f'{month.capitalize()} {day} falls within the Fall season')
+
+# check day entered for March, June, September, and December
+# determine season based on day entered
+if "mar" in overlap_month:
+  if day_integer <= 19:
+    print(f'{month.capitalize()} {day} falls within the Winter season')
+  else:
+    print(f'{month.capitalize()} {day} falls within the Spring season')
+elif "jun" in overlap_month:
+  if day_integer <= 20:
+    print(f'{month.capitalize()} {day} falls within the Spring season')
+  else:
+    print(f'{month.capitalize()} {day} falls within the Summer season')
+elif "sep" in overlap_month:
+  if day_integer <= 21:
+    print(f'{month.capitalize()} {day} falls within the Summer season')
+  else:
+    print(f'{month.capitalize()} {day} falls within the Fall season')
+# else: "dec" (December) in overlap_month
+else:
+  if day_integer <= 20:
+    print(f'{month.capitalize()} {day} falls within the Fall season')
+  else:
+    print(f'{month.capitalize()} {day} falls within the Winter season')
